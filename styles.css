@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #555;
+}
+
+input[type="text"], input[type="email"], input[type="url"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, textarea:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 123, 255, 0.2);
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Resume Styles */
+#resume {
+    margin-top: 50px;
+    padding: 30px;
+    border-top: 3px solid #007bff;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+}
+
+#resume h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+#resume p {
+    text-align: center;
+    margin: 5px 0 30px;
+    color: #555;
+    font-size: 1.2em;
+}
+
+#resume .summary, #resume .work-experience, #resume .education, #resume .skills, #resume .contact {
+    margin-bottom: 40px;
+}
+
+#resume .summary p, #resume .education p {
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.8em;
+}
+
+#resume .timeline-item {
+    margin-bottom: 30px;
+}
+
+#resume .timeline-item h3 {
+    margin: 5px 0;
+    color: #007bff;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+#resume .timeline-item .date {
+    color: #666;
+    font-size: 0.95em;
+}
+
+#resume .timeline-item p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.8em;
+    margin: 5px 0 0;
+}
+
+#resume .skills .skill {
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+#resume .skills .skill span {
+    display: inline-block;
+    width: 120px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1em;
+}
+
+#resume .skills .progress-bar {
+    background-color: #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    display: inline-block;
+    width: calc(100% - 130px);
+    height: 12px;
+    vertical-align: middle;
+}
+
+#resume .skills .progress {
+    background-color: #28a745;
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+#resume .contact p {
+    font-size: 1em;
+    line-height: 1.8em;
+    color: #333;
+    margin: 10px 0;
+}
+
+#resume .contact a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#resume .contact a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer button {
+    background-color: #28a745;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer button:hover {
+    background-color: #218838;
+}

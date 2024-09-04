@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Resume Builder</h1>
+        </header>
+
+        <form id="resumeForm">
+            <section>
+                <h2>Personal Information</h2>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required><br>
+                <label for="title">Title:</label>
+                <input type="text" id="title" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br>
+                <label for="linkedin">LinkedIn:</label>
+                <input type="url" id="linkedin"><br>
+                <label for="github">GitHub:</label>
+                <input type="url" id="github"><br>
+            </section>
+
+            <section>
+                <h2>Professional Summary</h2>
+                <textarea id="summary" rows="5" required></textarea>
+            </section>
+
+            <section>
+                <h2>Work Experience</h2>
+                <div id="workExperienceContainer">
+                    <div class="work-experience-item">
+                        <label for="jobTitle1">Job Title:</label>
+                        <input type="text" id="jobTitle1" required><br>
+                        <label for="jobDate1">Date:</label>
+                        <input type="text" id="jobDate1" required><br>
+                        <label for="jobDescription1">Description:</label>
+                        <textarea id="jobDescription1" rows="3" required></textarea><br>
+                    </div>
+                </div>
+                <button type="button" onclick="addWorkExperience()">Add More Experience</button>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <div id="educationContainer">
+                    <label for="education">Higher Degree Details:</label>
+                    <textarea id="education" rows="3" required></textarea><br>
+
+                    <h3>Schooling</h3>
+                    <div id="schoolingContainer">
+                        <div class="schooling-item">
+                            <label for="schoolName1">School Name:</label>
+                            <input type="text" id="schoolName1" required><br>
+                            <label for="schoolYear1">Year:</label>
+                            <input type="text" id="schoolYear1" required><br>
+                        </div>
+                    </div>
+                    <button type="button" onclick="addSchooling()">Add More Schooling</button>
+                </div>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <div id="skillsContainer">
+                    <div class="skill-item">
+                        <label for="skill1">Skill:</label>
+                        <input type="text" id="skill1" required><br>
+                        <label for="skillLevel1">Proficiency (%):</label>
+                        <input type="number" id="skillLevel1" min="0" max="100"  style="width: 160px;height: 25px;"><br>
+                    </div>
+                </div>
+                <button type="button" onclick="addSkill()">Add More Skills</button>
+            </section>
+
+            <section>
+                <h2>Projects</h2>
+                <div id="projectsContainer">
+                    <div class="project-item">
+                        <label for="projectTitle1">Project Title:</label>
+                        <input type="text" id="projectTitle1" required><br>
+                        <label for="projectDescription1">Description:</label>
+                        <textarea id="projectDescription1" rows="3" required></textarea><br>
+                    </div>
+                </div>
+                <button type="button" onclick="addProject()">Add More Projects</button>
+            </section>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+
+        <div id="resume" style="display:none;">
+            <header>
+                <div class="profile-picture">
+                    <img src="profile.jpg" alt="Profile Picture">
+                </div>
+                <h1 id="resumeName"></h1>
+                <p id="resumeTitle"></p>
+            </header>
+
+            <section class="summary">
+                <h2>Professional Summary</h2>
+                <p id="resumeSummary"></p>
+            </section>
+
+            <section class="work-experience">
+                <h2>Work Experience</h2>
+                <div id="resumeWorkExperience"></div>
+            </section>
+
+            <section class="education">
+                <h2>Education</h2>
+                <p id="resumeEducation"></p>
+                <h3>Schooling</h3>
+                <div id="resumeSchooling"></div>
+            </section>
+
+            <section class="skills">
+                <h2>Skills</h2>
+                <div id="resumeSkills"></div>
+            </section>
+
+            <section class="projects">
+                <h2>Projects</h2>
+                <div id="resumeProjects"></div>
+            </section>
+
+            <section class="contact">
+                <h2>Contact</h2>
+                <p>Email: <span id="resumeEmail"></span></p>
+                <p>LinkedIn: <a href="#" id="resumeLinkedIn"></a></p>
+                <p>GitHub: <a href="#" id="resumeGitHub"></a></p>
+            </section>
+
+            <footer>
+                <button onclick="downloadPDF()">Download PDF</button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
